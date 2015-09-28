@@ -3,5 +3,6 @@
     <li ng-repeat="item in students">
         {{ item.name }}
         {{ item.present }}
+        <button ng-click="signIn(item)" class="btn-success">Sign In</button>
     </li>
 </ul>
