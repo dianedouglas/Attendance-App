@@ -1,4 +1,5 @@
 <a ui-sref="sign-in">Sign In</a> | <a ui-sref="presence">Who's Here?</a>
+
 <div ng-show="studentsPresent.length">
     <h1>Here:</h1>
     <ul>
@@ -7,6 +8,7 @@
         </li>
     </ul>
 </div>
+
 <div ng-show="studentsNotPresent.length">
     <h1>Not here:</h1>
     <ul>
@@ -15,3 +17,11 @@
         </li>
     </ul>
 </div>
+
+<form ng-submit="StudentsFactory.addStudent()" class="form-inline" role="form">
+    <div class="form-group">
+        <label for="newStudent">Create new student:</label>
+        <input id="newStudent" type="text" ng-model="StudentsFactory.studentName" class="form-control" placeholder="Enter name">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

@@ -11,11 +11,13 @@ attendanceApp.factory('StudentsFactory', function StudentsFactory() {
         { name: "Odin", present: false},
     ];
     
-    //skeleton method for adding students if needed. but one thing at a time. 
-    // factory.addStudent = function() {
-    //     factory.students.push({ name: factory.studentName, present: false });
-    //     factory.studentName = null;
-    // };
+    //for extra exercise, add addStudent method to factory, called from teacher form in 'presence'
+    //since method modifies shared data, it is in the factory rather than either controller.
+    //use studentName model to create new student object and set its present property to default false
+    factory.addStudent = function() {
+        factory.students.push({ name: factory.studentName, present: false });
+        factory.studentName = null;
+    };
 
     return factory;
 });
