@@ -12,7 +12,7 @@ This is a basic application which tracks attendance. It has a page for students 
 
 * Clone this repository with the command: `git clone https://github.com/dianedouglas/Attendance-App.git`
 * Start a local server in the top level of the project directory: `Attendance-App`
-* Mac users can use the command: `python -m SimpleHTTPServer`
+* Mac users can start their local server with the command: `python -m SimpleHTTPServer`
 * Windows users can use [Mongoose](http://cesanta.com/mongoose.shtml)
 * Navigate your browser to the root path. On a Mac this would be: `http://localhost:8000/`
 
