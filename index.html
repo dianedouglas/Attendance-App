@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app='attendanceApp'>
+<head>
+    <!-- load order: angular lib, app, controllers, factory -->
+    <script src="lib/angular.js"></script> 
+    <script src="lib/angular-ui-router.js"></script> 
+    <script src="app.js"></script> 
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <title>Imaginary Attendance App!</title>
+</head>
+<body>
+    <div class="container">
+        <div ui-view>
+            <!-- Templates displayed here. No need for a controller yet on the home page. -->
+            <!-- Just want to make sure everything loads. -->
+        </div>
+    </div>
+</body>
+</html>
