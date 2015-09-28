@@ -1,7 +1,13 @@
 <h1>Here:</h1>
+<ul>
+    <li ng-repeat="item in studentsHere = (students | filter:{present: true})">
+        {{ item.name }}
+        {{ item.present }}
+    </li>
+</ul>
 <h1>Not here:</h1>
 <ul>
-    <li ng-repeat="item in students">
+    <li ng-repeat="item in studentsNotHere = (students | filter:{present: false})">
         {{ item.name }}
         {{ item.present }}
     </li>
