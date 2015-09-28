@@ -3,7 +3,7 @@
     <li ng-repeat="item in students">
         {{ item.name }}
         {{ item.present }}
-        <button ng-click="signIn(item)" type="button" class="btn btn-default">Sign In</button>
-        <button ng-click="signOut(item)" type="button" class="btn btn-warning">Sign Out</button>
+        <button ng-hide="item.present" ng-click="signIn(item)" type="button" class="btn btn-default">Sign In</button>
+        <button ng-show="item.present" ng-click="signOut(item)" type="button" class="btn btn-warning">Sign Out</button>
     </li>
 </ul>
