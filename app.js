@@ -6,15 +6,17 @@ attendanceApp.config(function($stateProvider, $urlRouterProvider) {
         url: "",
         templateUrl: "partials/home.html"
     });
-    
+
     $stateProvider.state('sign-in', {
         url: "sign-in",
-        templateUrl: "partials/sign-in.html"
+        templateUrl: "partials/sign-in.html",
+        controller: "StudentsCtrl"
     });
 
     $stateProvider.state('presence', {
         url: "presence",
-        templateUrl: "partials/presence.html"
+        templateUrl: "partials/presence.html",
+        controller: "TeachersCtrl"
     });
 
 });
