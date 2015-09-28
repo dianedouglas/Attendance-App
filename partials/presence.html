@@ -1,15 +1,17 @@
 <a ui-sref="sign-in">Sign In</a> | <a ui-sref="presence">Who's Here?</a>
-<h1>Here:</h1>
-<ul>
-    <li ng-repeat="item in studentsHere = (students | filter:{present: true})">
-        {{ item.name }}
-        {{ item.present }}
-    </li>
-</ul>
-<h1>Not here:</h1>
-<ul>
-    <li ng-repeat="item in studentsNotHere = (students | filter:{present: false})">
-        {{ item.name }}
-        {{ item.present }}
-    </li>
-</ul>
+<div ng-show="studentsPresent.length">
+    <h1>Here:</h1>
+    <ul>
+        <li ng-repeat="item in studentsPresent = (students | filter:{present: true})">
+            {{ item.name }}
+        </li>
+    </ul>
+</div>
+<div ng-show="studentsNotPresent.length">
+    <h1>Not here:</h1>
+    <ul>
+        <li ng-repeat="item in studentsNotPresent = (students | filter:{present: false})">
+            {{ item.name }}
+        </li>
+    </ul>
+</div>
